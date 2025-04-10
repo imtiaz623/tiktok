@@ -453,7 +453,6 @@ class="category-buttons"></div>
       alert("Members section coming soon! 
 
 🎉");
-      // Add your members functionality here
     }
 
     function checkBalanceForForm() {
@@ -692,20 +691,30 @@ video.title;
 
 button";
         
-        // Check if video was already watched
-        if (!videosWatched[video.title]) {
-          videoButton.onclick = function() {
-            watchVideo(video.title);
-            window.open(video.link, 
+        // Create unique key for default 
 
-'_blank');
-          };
-        } else {
-          videoButton.onclick = function() {
-            window.open(video.link, 
+videos
+        const videoKey = `default-
 
-'_blank');
-          };
+${category}-${video.title.replace(/\s+/g, 
+
+'-')}`;
+        
+        videoButton.onclick = function() {
+          if (!videosWatched[videoKey]) {
+            balance += 3;
+            videosWatched[videoKey] = true;
+            localStorage.setItem
+
+('videosWatched', JSON.stringify
+
+(videosWatched));
+            updateBalanceDisplay();
+          }
+          window.open(video.link, '_blank');
+        };
+        
+        if (videosWatched[videoKey]) {
           videoButton.style.opacity = "0.7";
         }
         
@@ -724,7 +733,9 @@ localStorage
 
 localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key.startsWith(`${category}-`)) {
+        if (key.startsWith(`${category}-`) && 
+
+!key.startsWith('default-')) {
           const videoTitle = key.replace(`
 
 ${category}-`, "");
@@ -749,23 +760,21 @@ videoTitle;
 
 button";
           
-          if (!videosWatched[key]) {
-            videoButton.onclick = function() 
+          videoButton.onclick = function() {
+            if (!videosWatched[key]) {
+              balance += 3;
+              videosWatched[key] = true;
+              localStorage.setItem
 
-{
-              watchVideo(key);
-              window.open(videoLink, 
+('videosWatched', JSON.stringify
 
-'_blank');
-            };
-          } else {
-            videoButton.onclick = function() 
-
-{
-              window.open(videoLink, 
-
-'_blank');
-            };
+(videosWatched));
+              updateBalanceDisplay();
+            }
+            window.open(videoLink, '_blank');
+          };
+          
+          if (videosWatched[key]) {
             videoButton.style.opacity = 
 
 "0.7";
@@ -787,7 +796,18 @@ document.createElement('button');
 btn";
             deleteBtn.onclick = function(e) {
               e.stopPropagation();
-              deleteVideo(key);
+              if (confirm("Kya aap is video 
+
+ko delete karna chahte hain?")) {
+                localStorage.removeItem(key);
+                delete userVideos[key];
+                localStorage.setItem
+
+('userVideos', JSON.stringify(userVideos));
+                loadCategoryVideos
+
+(currentCategory);
+              }
             };
             videoContainer.appendChild
 
@@ -798,35 +818,6 @@ btn";
 
 (videoContainer);
         }
-      }
-    }
-
-    function watchVideo(videoKey) {
-      if (!videosWatched[videoKey]) {
-        // First time watching this video
-        balance += 3;
-        videosWatched[videoKey] = true;
-        localStorage.setItem('videosWatched', 
-
-JSON.stringify(videosWatched));
-        updateBalanceDisplay();
-        alert("Video watched! +RS3 added to 
-
-your balance");
-      }
-    }
-
-    function deleteVideo(videoKey) {
-      if (confirm("Kya aap is video ko delete 
-
-karna chahte hain?")) {
-        localStorage.removeItem(videoKey);
-        delete userVideos[videoKey];
-        localStorage.setItem('userVideos', 
-
-JSON.stringify(userVideos));
-        loadCategoryVideos(currentCategory);
-        alert("Video delete ho gaya!");
       }
     }
 
