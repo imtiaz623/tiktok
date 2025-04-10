@@ -2,13 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" 
-
-content="width=device-width, initial-
-
-scale=1.0, maximum-scale=1.0, user-
-
-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Watick Video Earn Money</title>
   <style>
     * {
@@ -16,9 +10,7 @@ scalable=no">
     }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, 
-
-#111, #222);
+      background: linear-gradient(to right, #111, #222);
       color: white;
       margin: 0;
       padding: 15px;
@@ -40,9 +32,7 @@ scalable=no">
       border-radius: 16px;
       width: 100%;
       max-width: 500px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 
-
-0.2);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -102,24 +92,16 @@ scalable=no">
       transform: translateY(0);
       transition: all 0.3s;
       animation: pulse-purple 2s infinite;
-      background: linear-gradient(145deg, 
-
-#9c27b0, #673ab7);
+      background: linear-gradient(145deg, #9c27b0, #673ab7);
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
     .members-btn:active {
       transform: translateY(2px);
     }
     @keyframes pulse-purple {
-      0% { box-shadow: 0 0 0 0 rgba(156, 39, 
-
-176, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(156, 
-
-39, 176, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(156, 
-
-39, 176, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(156, 39, 176, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(156, 39, 176, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(156, 39, 176, 0); }
     }
     .video-list-container {
       width: 100%;
@@ -156,9 +138,7 @@ scalable=no">
       width: 100%;
       font-size: 0.9rem;
     }
-    .video-list-header .search-bar .search-
-
-icon {
+    .video-list-header .search-bar .search-icon {
       background-color: #00ffff;
       padding: 8px;
       border-radius: 10px;
@@ -232,17 +212,13 @@ icon {
     .bonus-btn {
       position: absolute;
       right: 0;
-      background: linear-gradient(145deg, 
-
-#ffd700, #ff9900);
+      background: linear-gradient(145deg, #ffd700, #ff9900);
       color: #000;
       padding: 5px 10px;
       border-radius: 15px;
       font-size: 0.7rem;
       font-weight: bold;
-      box-shadow: 0 3px 6px rgba(255, 215, 0, 
-
-0.4);
+      box-shadow: 0 3px 6px rgba(255, 215, 0, 0.4);
       animation: pulse 2s infinite;
       border: none;
       cursor: pointer;
@@ -279,100 +255,61 @@ icon {
     <h1>Watick Video Earn Money</h1>
     
     <!-- Profile Section -->
-    <div id="profileSection" class="profile 
-
-hidden">
-      <img id="profileImage" src="" 
-
-alt="Profile Image" />
-      <span id="profileName">Welcome back, 
-
-User!</span>
-      <button id="bonusButton" class="bonus-
-
-btn hidden" onclick="showBonusMessage
-
-()">Bonus</button>
+    <div id="profileSection" class="profile hidden">
+      <img id="profileImage" src="" alt="Profile Image" />
+      <span id="profileName">Welcome back, User!</span>
+      <button id="bonusButton" class="bonus-btn hidden" onclick="showBonusMessage()">Bonus</button>
     </div>
 
     <!-- Profile Setup Form -->
     <div id="profileSetup">
       <h2>Set up your Profile</h2>
-      <input type="text" id="nameInput" 
-
-placeholder="Enter your name" />
-      <input type="file" id="profilePicInput" 
-
-accept="image/*" />
-      <button onclick="saveProfile()">Save 
-
-Profile</button>
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <input type="file" id="profilePicInput" accept="image/*" />
+      <button onclick="saveProfile()">Save Profile</button>
     </div>
 
     <!-- Balance Display -->
     <div class="balance-container">
-      <div id="balanceDisplay" 
-
-class="balance">
+      <div id="balanceDisplay" class="balance">
         Balance: RS0
       </div>
-      <button class="withdraw-btn" 
-
-onclick="showWithdrawMessage
-
-()">Withdraw</button>
-      <button class="members-btn" 
-
-onclick="showMembers()">Members</button>
+      <button class="withdraw-btn" onclick="showWithdrawMessage()">Withdraw</button>
+      <button class="members-btn" onclick="showMembers()">Members</button>
     </div>
 
-    <!-- Withdraw Message (Hidden by default) 
+    <!-- Withdraw Message (Hidden by default) -->
+    <div id="withdrawMessage" class="urdu-message hidden">
+      Moziz Sarfien, ye app abhi tayar ho rahi hai. Kuch waqt mein aap isse use kar sakenge. Aap asani se withdrawal kar 
 
--->
-    <div id="withdrawMessage" class="urdu-
+sakte hain, chahe JazzCash ho ya EasyPaisa. Is app mein video dekh kar earning kar sakte hain aur apni TikTok video ka link 
 
-message hidden">
-      محترم صارف! یہ ایپ تیار ہو رہی ہے اور کچھ دنوں کے اندر 
-
-آپ کو وٹھڈراؤ سسٹم مل جائے گا۔ وٹھڈراؤ JazzCash، EasyPaisa 
-
-یا بینک اکاؤنٹ میں ہوگا۔ یہ ایپ بے روزگار بھائی بہنوں کے لیے ڈیزائن ہو 
-
-رہی ہے۔ بہت جلد یہ ایپ بہت کچھ لے کر آئے گی۔ بس ویڈیو دیکھو، ارننگ 
-
-کرو، اپنے TikTok ویڈیو کا لنک شامل کرو، اور فالوورز، ویوز، لائکس 
-
-بڑھاؤ!
+add kar sakte hain. Aapko yahan se kaafi achay views milenge.!
     </div>
 
-    <!-- Bonus Message (Hidden by default) 
+    <!-- Bonus Message (Hidden by default) -->
+    <div id="bonusMessage" class="urdu-message hidden">
+      موزز صفیّن، اپنی پروفائل مکمل کریں اور پائیں 20 روپے کا بونس۔ پروفائل سیٹ کرنے کے لیے آپ کو تصویر اور نام کی ضرورت ہوگی۔
 
--->
-    <div id="bonusMessage" class="urdu-
 
-message hidden">
-      اپنی پروفائل مکمل کریں اور 20 روپے کا بونس حاصل کریں!
 
-<br>
-      پروفائل مکمل کرنے کے لیے نام اور تصویر شامل کریں۔
+
+
+
+
+
+!<br>
+     
     </div>
 
     <!-- Main Category Buttons -->
     <div id="mainCategoryButtons">
-      <button onclick="openCategory
-
-('youtube')">YouTube</button>
-      <button onclick="openCategory
-
-('instagram')">Instagram</button>
-      <button onclick="openCategory
-
-('tiktok')">TikTok</button>
+      <button onclick="openCategory('youtube')">YouTube</button>
+      <button onclick="openCategory('instagram')">Instagram</button>
+      <button onclick="openCategory('tiktok')">TikTok</button>
       <button 
         onclick="checkBalanceForForm()"
-        style="background: linear-gradient
-
-(145deg, #ff6f61, #ff8e53);"
+        style="background: linear-gradient(145deg, #ff6f61, #ff8e53);"
       >
         Add Your Video Link
       </button>
@@ -382,51 +319,27 @@ message hidden">
     <div id="categoryContent" class="hidden">
       <div class="video-list-container">
         <div class="video-list-header">
-          <button class="back-button" 
-
-onclick="goBackToMain()">⬅ Back</button>
+          <button class="back-button" onclick="goBackToMain()">← Back</button>
           <div class="search-bar">
-            <input type="text" 
-
-id="categorySearchInput" placeholder="Search 
-
-videos..." oninput="filterCategoryVideos()" 
-
-/>
+            <input type="text" id="categorySearchInput" placeholder="Search videos..." oninput="filterCategoryVideos()" />
             <div class="search-icon">🔍</div>
           </div>
         </div>
 
-        <div id="categoryButtons" 
-
-class="category-buttons"></div>
+        <div id="categoryButtons" class="category-buttons"></div>
       </div>
     </div>
   </div>
 
   <script>
     // Load Data
-    const savedName = localStorage.getItem
-
-('name');
-    const savedImage = localStorage.getItem
-
-('profileImage');
-    let balance = parseInt
-
-(localStorage.getItem('balance')) || 0;
+    const savedName = localStorage.getItem('name');
+    const savedImage = localStorage.getItem('profileImage');
+    let balance = parseInt(localStorage.getItem('balance')) || 0;
     let currentCategory = "";
-    let videosWatched = JSON.parse
-
-(localStorage.getItem('videosWatched')) || 
-
-{};
-    let userVideos = JSON.parse
-
-(localStorage.getItem('userVideos')) || {};
-    let bonusClaimed = localStorage.getItem
-
-('bonusClaimed') === 'true';
+    let videosWatched = JSON.parse(localStorage.getItem('videosWatched')) || {};
+    let userVideos = JSON.parse(localStorage.getItem('userVideos')) || {};
+    let bonusClaimed = localStorage.getItem('bonusClaimed') === 'true';
 
     // Initialize
     window.onload = function() {
@@ -434,281 +347,158 @@ class="category-buttons"></div>
       updateBalanceDisplay();
       
       if (savedName && savedImage) {
-        document.getElementById
-
-('profileSetup').classList.add('hidden');
-        document.getElementById
-
-('profileSection').classList.remove
-
-('hidden');
-      } else if (!bonusClaimed) {
-        document.getElementById
-
-('bonusButton').classList.remove('hidden');
+        document.getElementById('profileSetup').classList.add('hidden');
+        document.getElementById('profileSection').classList.remove('hidden');
+      }
+      
+      // Show bonus button if not claimed yet
+      if (!bonusClaimed && savedName && savedImage) {
+        document.getElementById('bonusButton').classList.remove('hidden');
       }
     };
 
     function showMembers() {
-      alert("Members section coming soon! 
-
-🎉");
+      alert("Members section coming soon! 👥");
     }
 
     function checkBalanceForForm() {
       if (balance >= 10) {
-        window.open
-
-('https://docs.google.com/forms/d/1CVT0LdZ6Mo
-
-Kuj0-le8LcqhulkRZ8ut0wP2Yqtvv6vq0/edit', 
-
-'_blank');
+        window.open('https://docs.google.com/forms/d/1CVT0LdZ6MoKuj0-le8LcqhulkRZ8ut0wP2Yqtvv6vq0/edit', '_blank');
       } else {
-        alert("Moziz Sarif! Apka balance kam 
-
-hai (RS10 required).\nVideo dekhe aur balance 
-
-zyada kare.");
+        alert("Moziz Sarif! Apka balance kam hai (RS10 required).\nVideo dekhe aur balance zyada kare.");
       }
     }
 
     function updateBalanceDisplay() {
-      document.getElementById
-
-('balanceDisplay').textContent = `Balance: 
-
-RS${balance}`;
-      localStorage.setItem('balance', 
-
-balance);
+      document.getElementById('balanceDisplay').textContent = `Balance: RS${balance}`;
+      localStorage.setItem('balance', balance);
     }
 
     // Profile Functions
     function updateProfile() {
-      const profileSection = 
-
-document.getElementById('profileSection');
-      const profileName = 
-
-document.getElementById('profileName');
-      const profileImage = 
-
-document.getElementById('profileImage');
+      const profileSection = document.getElementById('profileSection');
+      const profileName = document.getElementById('profileName');
+      const profileImage = document.getElementById('profileImage');
       
       if (savedName && savedImage) {
-        profileName.textContent = `Welcome 
-
-back, ${savedName}!`;
+        profileName.textContent = `Welcome back, ${savedName}!`;
         profileImage.src = savedImage;
-        profileSection.classList.remove
-
-('hidden');
+        profileSection.classList.remove('hidden');
+        document.getElementById('profileSetup').classList.add('hidden');
+      } else {
+        profileSection.classList.add('hidden');
+        document.getElementById('profileSetup').classList.remove('hidden');
       }
     }
 
     function saveProfile() {
-      const name = document.getElementById
+      const name = document.getElementById('nameInput').value.trim();
+      const profilePicInput = document.getElementById('profilePicInput').files[0];
 
-('nameInput').value.trim();
-      const profilePicInput = 
+      if (!name) {
+        alert("Name dalo!");
+        return;
+      }
 
-document.getElementById
-
-('profilePicInput').files[0];
-
-      if (!name || !profilePicInput) {
-        alert("Name aur Profile Picture dono 
-
-dalo!");
+      if (!profilePicInput) {
+        alert("Profile Picture dalo!");
         return;
       }
 
       const reader = new FileReader();
       reader.onload = function() {
         localStorage.setItem('name', name);
-        localStorage.setItem('profileImage', 
-
-reader.result);
-        updateProfile();
-        document.getElementById
-
-('profileSetup').classList.add('hidden');
-        alert("Profile save ho gaya! 😊");
+        localStorage.setItem('profileImage', reader.result);
         
         // Add bonus if not claimed yet
         if (!bonusClaimed) {
           balance += 20;
           updateBalanceDisplay();
           bonusClaimed = true;
-          localStorage.setItem
-
-('bonusClaimed', 'true');
-          document.getElementById
-
-('bonusButton').classList.add('hidden');
-          alert("Congratulations! RS20 bonus 
-
-added to your account");
+          localStorage.setItem('bonusClaimed', 'true');
+          alert("Congratulations! RS20 bonus added to your account");
         }
+        
+        updateProfile();
       };
       reader.readAsDataURL(profilePicInput);
     }
 
     function showBonusMessage() {
-      document.getElementById
-
-('bonusMessage').classList.remove('hidden');
+      document.getElementById('bonusMessage').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('bonusMessage').classList.add('hidden');
+      }, 5000);
     }
 
     // Withdraw Message Function
     function showWithdrawMessage() {
-      const messageDiv = 
-
-document.getElementById('withdrawMessage');
+      const messageDiv = document.getElementById('withdrawMessage');
       messageDiv.classList.toggle('hidden');
-      document.getElementById
-
-('bonusMessage').classList.add('hidden');
+      document.getElementById('bonusMessage').classList.add('hidden');
     }
 
     // Category Functions
     function openCategory(category) {
       currentCategory = category;
-      document.getElementById
-
-('mainCategoryButtons').classList.add
-
-('hidden');
-      document.getElementById
-
-('categoryContent').classList.remove
-
-('hidden');
-      document.getElementById
-
-('withdrawMessage').classList.add('hidden');
-      document.getElementById
-
-('bonusMessage').classList.add('hidden');
+      document.getElementById('mainCategoryButtons').classList.add('hidden');
+      document.getElementById('categoryContent').classList.remove('hidden');
+      document.getElementById('withdrawMessage').classList.add('hidden');
+      document.getElementById('bonusMessage').classList.add('hidden');
       loadCategoryVideos(category);
     }
 
     function goBackToMain() {
-      document.getElementById
-
-('mainCategoryButtons').classList.remove
-
-('hidden');
-      document.getElementById
-
-('categoryContent').classList.add('hidden');
+      document.getElementById('mainCategoryButtons').classList.remove('hidden');
+      document.getElementById('categoryContent').classList.add('hidden');
     }
 
     function loadCategoryVideos(category) {
-      const categoryButtons = 
-
-document.getElementById('categoryButtons');
+      const categoryButtons = document.getElementById('categoryButtons');
       categoryButtons.innerHTML = "";
 
-      // Default videos for each category (5 
-
-buttons)
+      // Default videos for each category (5 buttons)
       const defaultVideos = {
         'youtube': [
-          {title: "YouTube Video 1", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 2", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 3", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 4", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 5", link: 
-
-"https://youtube.com"}
+          {title: "YouTube Video 1", link: "https://youtube.com"},
+          {title: "YouTube Video 2", link: "https://youtube.com"},
+          {title: "YouTube Video 3", link: "https://youtube.com"},
+          {title: "YouTube Video 4", link: "https://youtube.com"},
+          {title: "YouTube Video 5", link: "https://youtube.com"}
         ],
         'instagram': [
-          {title: "Instagram Video 1", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 2", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 3", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 4", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 5", link: 
-
-"https://instagram.com"}
+          {title: "Instagram Video 1", link: "https://instagram.com"},
+          {title: "Instagram Video 2", link: "https://instagram.com"},
+          {title: "Instagram Video 3", link: "https://instagram.com"},
+          {title: "Instagram Video 4", link: "https://instagram.com"},
+          {title: "Instagram Video 5", link: "https://instagram.com"}
         ],
         'tiktok': [
-          {title: "Sheya Boy", link: 
-
-"https://vt.tiktok.com/ZSraAp8WN/"},
-          {title: "WhatsApp Status", link: 
-
-"https://vt.tiktok.com/ZSraAqQvj/"},
-          {title: "Ali Mola", link: 
-
-"https://vt.tiktok.com/ZSraADnDb/"},
-          {title: "TikTok Video 4", link: 
-
-"https://tiktok.com"},
-          {title: "TikTok Video 5", link: 
-
-"https://tiktok.com"}
+          {title: "Sheya Boy", link: "https://vt.tiktok.com/ZSraAp8WN/"},
+          {title: "WhatsApp Status", link: "https://vt.tiktok.com/ZSraAqQvj/"},
+          {title: "Ali Mola", link: "https://vt.tiktok.com/ZSraADnDb/"},
+          {title: "TikTok Video 4", link: "https://tiktok.com"},
+          {title: "TikTok Video 5", link: "https://tiktok.com"}
         ]
       };
 
-      // Add default videos for the selected 
+      // Add default videos for the selected category
+      defaultVideos[category].forEach(video => {
+        const videoContainer = document.createElement('div');
+        videoContainer.className = "user-video-container";
 
-category
-      defaultVideos[category].forEach(video 
-
-=> {
-        const videoContainer = 
-
-document.createElement('div');
-        videoContainer.className = "user-
-
-video-container";
-
-        const videoButton = 
-
-document.createElement('button');
-        videoButton.textContent = 
-
-video.title;
-        videoButton.className = "video-
-
-button";
+        const videoButton = document.createElement('button');
+        videoButton.textContent = video.title;
+        videoButton.className = "video-button";
         
-        // Create unique key for default 
-
-videos
-        const videoKey = `default-
-
-${category}-${video.title.replace(/\s+/g, 
-
-'-')}`;
+        // Create unique key for default videos
+        const videoKey = `default-${category}-${video.title.replace(/\s+/g, '-')}`;
         
         videoButton.onclick = function() {
           if (!videosWatched[videoKey]) {
             balance += 3;
             videosWatched[videoKey] = true;
-            localStorage.setItem
-
-('videosWatched', JSON.stringify
-
-(videosWatched));
+            localStorage.setItem('videosWatched', JSON.stringify(videosWatched));
             updateBalanceDisplay();
           }
           window.open(video.link, '_blank');
@@ -718,137 +508,69 @@ ${category}-${video.title.replace(/\s+/g,
           videoButton.style.opacity = "0.7";
         }
         
-        videoContainer.appendChild
-
-(videoButton);
-        categoryButtons.appendChild
-
-(videoContainer);
+        videoContainer.appendChild(videoButton);
+        categoryButtons.appendChild(videoContainer);
       });
 
-      // Add user's own videos from 
-
-localStorage
-      for (let i = 0; i < 
-
-localStorage.length; i++) {
+      // Add user's own videos from localStorage
+      for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key.startsWith(`${category}-`) && 
+        if (key.startsWith(`${category}-`) && !key.startsWith('default-')) {
+          const videoTitle = key.replace(`${category}-`, "");
+          const videoLink = localStorage.getItem(key);
 
-!key.startsWith('default-')) {
-          const videoTitle = key.replace(`
+          const videoContainer = document.createElement('div');
+          videoContainer.className = "user-video-container";
 
-${category}-`, "");
-          const videoLink = 
-
-localStorage.getItem(key);
-
-          const videoContainer = 
-
-document.createElement('div');
-          videoContainer.className = "user-
-
-video-container";
-
-          const videoButton = 
-
-document.createElement('button');
-          videoButton.textContent = 
-
-videoTitle;
-          videoButton.className = "video-
-
-button";
+          const videoButton = document.createElement('button');
+          videoButton.textContent = videoTitle;
+          videoButton.className = "video-button";
           
           videoButton.onclick = function() {
             if (!videosWatched[key]) {
               balance += 3;
               videosWatched[key] = true;
-              localStorage.setItem
-
-('videosWatched', JSON.stringify
-
-(videosWatched));
+              localStorage.setItem('videosWatched', JSON.stringify(videosWatched));
               updateBalanceDisplay();
             }
             window.open(videoLink, '_blank');
           };
           
           if (videosWatched[key]) {
-            videoButton.style.opacity = 
-
-"0.7";
+            videoButton.style.opacity = "0.7";
           }
           
-          videoContainer.appendChild
-
-(videoButton);
+          videoContainer.appendChild(videoButton);
           
-          if (userVideos[key] && userVideos
-
-[key] === savedName) {
-            const deleteBtn = 
-
-document.createElement('button');
+          if (userVideos[key] && userVideos[key] === savedName) {
+            const deleteBtn = document.createElement('button');
             deleteBtn.textContent = "Delete";
-            deleteBtn.className = "delete-
-
-btn";
+            deleteBtn.className = "delete-btn";
             deleteBtn.onclick = function(e) {
               e.stopPropagation();
-              if (confirm("Kya aap is video 
-
-ko delete karna chahte hain?")) {
+              if (confirm("Kya aap is video ko delete karna chahte hain?")) {
                 localStorage.removeItem(key);
                 delete userVideos[key];
-                localStorage.setItem
-
-('userVideos', JSON.stringify(userVideos));
-                loadCategoryVideos
-
-(currentCategory);
+                localStorage.setItem('userVideos', JSON.stringify(userVideos));
+                loadCategoryVideos(currentCategory);
               }
             };
-            videoContainer.appendChild
-
-(deleteBtn);
+            videoContainer.appendChild(deleteBtn);
           }
           
-          categoryButtons.appendChild
-
-(videoContainer);
+          categoryButtons.appendChild(videoContainer);
         }
       }
     }
 
     function filterCategoryVideos() {
-      const searchInput = 
+      const searchInput = document.getElementById('categorySearchInput').value.toLowerCase();
+      const videoContainers = document.getElementById('categoryButtons').children;
 
-document.getElementById
-
-('categorySearchInput').value.toLowerCase();
-      const videoContainers = 
-
-document.getElementById
-
-('categoryButtons').children;
-
-      for (let container of videoContainers) 
-
-{
-        const button = 
-
-container.querySelector('button.video-
-
-button');
-        const buttonText = 
-
-button.textContent.toLowerCase();
-        container.style.display = 
-
-buttonText.includes(searchInput) ? "flex" : 
-
-"none";
+      for (let container of videoContainers) {
+        const button = container.querySelector('button.video-button');
+        const buttonText = button.textContent.toLowerCase();
+        container.style.display = buttonText.includes(searchInput) ? "flex" : "none";
       }
     }
   </script>
