@@ -267,6 +267,12 @@
     <div id="mainCategoryButtons">
       <button onclick="openCategory('youtube')">YouTube</button>
       <button onclick="openCategory('instagram')">Instagram</button>
+      <button 
+        onclick="checkBalanceForForm()"
+        style="background: linear-gradient(145deg, #ff6f61, #ff8e53);"
+      >
+        Add Your Video Link
+      </button>
     </div>
 
     <!-- Category Content -->
@@ -281,12 +287,6 @@
         </div>
 
         <div id="categoryButtons" class="category-buttons"></div>
-      </div>
-
-      <div class="add-link-form">
-        <input type="url" id="categoryLink" placeholder="Add Your Video Link" />
-        <input type="text" id="videoTitle" placeholder="Add Video Title" />
-        <button onclick="addLink()">Add Video</button>
       </div>
     </div>
   </div>
@@ -313,6 +313,15 @@
         document.getElementById('bonusButton').classList.remove('hidden');
       }
     };
+
+    // NEW FUNCTION FOR BALANCE CHECK
+    function checkBalanceForForm() {
+      if (balance >= 10) {
+        window.open('https://docs.google.com/forms/d/1CVT0LdZ6MoKuj0-le8LcqhulkRZ8ut0wP2Yqtvv6vq0/edit', '_blank');
+      } else {
+        alert("Moziz Sarif! Apka balance kam hai (RS10 required).\nVideo dekhe aur balance zyada kare.");
+      }
+    }
 
     function updateBalanceDisplay() {
       document.getElementById('balanceDisplay').textContent = `Balance: RS${balance}`;
@@ -466,41 +475,6 @@
         const button = container.querySelector('button.video-button');
         const buttonText = button.textContent.toLowerCase();
         container.style.display = buttonText.includes(searchInput) ? "flex" : "none";
-      }
-    }
-
-    function addLink() {
-      const link = document.getElementById('categoryLink').value;
-      const title = document.getElementById('videoTitle').value;
-
-      if (!link || !title) {
-        alert("Link aur Title dono dalo!");
-        return;
-      }
-
-      if (balance >= 10) {
-        // Deduct RS10 for adding video
-        balance -= 10;
-        updateBalanceDisplay();
-
-        const videoKey = `${currentCategory}-${title}`;
-        // Save to localStorage
-        localStorage.setItem(videoKey, link);
-        
-        // Mark as user's video
-        userVideos[videoKey] = savedName;
-        localStorage.setItem('userVideos', JSON.stringify(userVideos));
-        
-        // Add new button
-        loadCategoryVideos(currentCategory);
-        
-        // Clear inputs
-        document.getElementById('categoryLink').value = "";
-        document.getElementById('videoTitle').value = "";
-        
-        alert("Video add ho gaya! RS10 apke balance se kat gaye.");
-      } else {
-        alert("Sorry! Aapka balance kam hai. Video dekhe aur balance zyada kare. Shukriya!");
       }
     }
   </script>
