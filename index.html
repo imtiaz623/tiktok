@@ -13,26 +13,22 @@ scalable=no">
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, 
+
+Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, 
 
 #111, #222);
       color: white;
-      margin: 0;
       padding: 15px;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-    }
-    h1 {
-      color: #0ff;
-      text-shadow: 0 0 5px #0ff;
-      font-size: 1.5rem;
-      margin: 10px 0;
-      text-align: center;
     }
     .container {
       background: #1a1a1a;
@@ -43,9 +39,13 @@ scalable=no">
       box-shadow: 0 0 20px rgba(0, 255, 255, 
 
 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    }
+    h1 {
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff;
+      font-size: 1.5rem;
+      margin: 10px 0;
+      text-align: center;
     }
     button {
       padding: 12px;
@@ -57,11 +57,7 @@ scalable=no">
       cursor: pointer;
       width: 100%;
       font-size: 1rem;
-      transition: 0.3s ease;
       margin-bottom: 10px;
-    }
-    button:hover {
-      background: #0ff6;
     }
     .hidden {
       display: none;
@@ -71,181 +67,49 @@ scalable=no">
       align-items: center;
       gap: 10px;
       margin: 15px 0;
-      width: 100%;
       justify-content: center;
     }
     .balance {
       font-size: 1rem;
       color: #0f0;
       font-weight: bold;
-      text-align: center;
     }
     .withdraw-btn {
       background-color: #ff6f61;
       padding: 6px 12px;
       border-radius: 10px;
       color: #000;
-      cursor: pointer;
       font-weight: bold;
-      font-size: 0.8rem;
-      white-space: nowrap;
-      width: auto;
     }
     .members-btn {
       padding: 6px 12px;
       border-radius: 10px;
       color: white;
       font-weight: bold;
-      cursor: pointer;
-      font-size: 0.8rem;
-      border: none;
-      transform: translateY(0);
-      transition: all 0.3s;
-      animation: pulse-purple 2s infinite;
       background: linear-gradient(145deg, 
 
 #9c27b0, #673ab7);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    .members-btn:active {
-      transform: translateY(2px);
-    }
-    @keyframes pulse-purple {
-      0% { box-shadow: 0 0 0 0 rgba(156, 39, 
-
-176, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(156, 
-
-39, 176, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(156, 
-
-39, 176, 0); }
-    }
-    .video-list-container {
-      width: 100%;
-      margin-top: 15px;
-    }
-    .video-list-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-      gap: 10px;
-    }
-    .video-list-header .back-button {
-      background-color: #ff6f61;
-      padding: 6px 12px;
-      border-radius: 10px;
-      color: #000;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 0.8rem;
-      white-space: nowrap;
-    }
-    .video-list-header .search-bar {
-      display: flex;
-      align-items: center;
-      flex-grow: 1;
-    }
-    .video-list-header .search-bar input {
-      padding: 8px;
-      border-radius: 10px;
-      border: none;
-      background-color: #333;
-      color: white;
-      width: 100%;
-      font-size: 0.9rem;
-    }
-    .video-list-header .search-bar .search-
-
-icon {
-      background-color: #00ffff;
-      padding: 8px;
-      border-radius: 10px;
-      margin-left: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    .category-buttons {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 10px;
     }
     .profile {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
-      width: 100%;
-      position: relative;
     }
     .profile img {
       border-radius: 50%;
       width: 40px;
       height: 40px;
       margin-right: 10px;
-      object-fit: cover;
-    }
-    .profile span {
-      font-size: 1rem;
-      color: #fff;
-    }
-    .add-link-form {
-      width: 100%;
-      margin-top: 15px;
-    }
-    .add-link-form input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      border: none;
-      background-color: #333;
-      color: white;
-      font-size: 0.9rem;
-    }
-    .urdu-message {
-      direction: rtl;
-      text-align: right;
-      padding: 20px;
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      margin-top: 20px;
-      border: 1px solid #0ff;
-    }
-    .user-video-container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    .delete-btn {
-      background-color: #ff0000;
-      padding: 4px;
-      border-radius: 5px;
-      color: white;
-      font-size: 0.7rem;
-      width: 60px;
-      align-self: center;
-      margin-top: -8px;
-      margin-bottom: 5px;
     }
     .bonus-btn {
-      position: absolute;
-      right: 0;
       background: linear-gradient(145deg, 
 
 #ffd700, #ff9900);
-      color: #000;
       padding: 5px 10px;
       border-radius: 15px;
-      font-size: 0.7rem;
+      color: #000;
       font-weight: bold;
-      box-shadow: 0 3px 6px rgba(255, 215, 0, 
-
-0.4);
-      animation: pulse 2s infinite;
-      border: none;
-      cursor: pointer;
+      margin-left: 10px;
     }
     .share-btn {
       background: linear-gradient(145deg, 
@@ -253,28 +117,21 @@ icon {
 #4CAF50, #2E7D32);
       color: white;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .urdu-message {
+      direction: rtl;
+      text-align: right;
+      padding: 15px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px solid #0ff;
     }
-
     @media (max-width: 400px) {
       .container {
         padding: 15px;
       }
       h1 {
         font-size: 1.3rem;
-      }
-      button, .add-link-form input {
-        padding: 10px;
-      }
-      .profile img {
-        width: 35px;
-        height: 35px;
-      }
-      .balance-container {
-        flex-wrap: wrap;
       }
     }
   </style>
@@ -284,16 +141,13 @@ icon {
   <div class="container">
     <h1>Watick Video Earn Money</h1>
     
-    <!-- Profile Section -->
     <div id="profileSection" class="profile 
 
 hidden">
       <img id="profileImage" src="" 
 
-alt="Profile Image" />
-      <span id="profileName">Welcome back, 
-
-User!</span>
+alt="Profile">
+      <span id="profileName"></span>
       <button id="bonusButton" class="bonus-
 
 btn hidden" onclick="showBonusMessage
@@ -301,27 +155,23 @@ btn hidden" onclick="showBonusMessage
 ()">Bonus</button>
     </div>
 
-    <!-- Profile Setup Form -->
     <div id="profileSetup">
       <h2>Set up your Profile</h2>
       <input type="text" id="nameInput" 
 
-placeholder="Enter your name" />
+placeholder="Enter your name">
       <input type="file" id="profilePicInput" 
 
-accept="image/*" />
+accept="image/*">
       <button onclick="saveProfile()">Save 
 
 Profile</button>
     </div>
 
-    <!-- Balance Display -->
     <div class="balance-container">
       <div id="balanceDisplay" 
 
-class="balance">
-        Balance: RS0
-      </div>
+class="balance">Balance: RS0</div>
       <button class="withdraw-btn" 
 
 onclick="showWithdrawMessage
@@ -332,9 +182,6 @@ onclick="showWithdrawMessage
 onclick="showMembers()">Members</button>
     </div>
 
-    <!-- Withdraw Message (Hidden by default) 
-
--->
     <div id="withdrawMessage" class="urdu-
 
 message hidden">
@@ -342,34 +189,17 @@ message hidden">
 
 rahi hai. Kuch waqt mein aap isse use kar 
 
-sakenge. Aap asani se withdrawal kar sakte 
-
-hain, chahe JazzCash ho ya EasyPaisa. Is app 
-
-mein video dekh kar earning kar sakte hain 
-
-aur apni TikTok video ka link add kar sakte 
-
-hain. Aapko yahan se kaafi achay views 
-
-milenge.!
+sakenge...
     </div>
 
-    <!-- Bonus Message (Hidden by default) 
-
--->
     <div id="bonusMessage" class="urdu-
 
 message hidden">
       موزز صفیّن، اپنی پروفائل مکمل کریں اور پائیں 20 روپے کا 
 
-بونس۔ پروفائل سیٹ کرنے کے لیے آپ کو تصویر اور نام کی ضرورت 
-
-ہوگی۔
-      <br>
+بونس۔
     </div>
 
-    <!-- Main Category Buttons -->
     <div id="mainCategoryButtons">
       <button onclick="openCategory
 
@@ -380,68 +210,41 @@ message hidden">
       <button onclick="openCategory
 
 ('tiktok')">TikTok</button>
-      <button 
-        onclick="checkBalanceForForm()"
-        style="background: linear-gradient
+      <button onclick="checkBalanceForForm
 
-(145deg, #ff6f61, #ff8e53);"
-      >
-        Add Your Video Link
-      </button>
+()">Add Your Video Link</button>
       <button class="share-btn" 
 
 onclick="shareApp()">Share This App</button>
     </div>
 
-    <!-- Category Content -->
     <div id="categoryContent" class="hidden">
-      <div class="video-list-container">
-        <div class="video-list-header">
-          <button class="back-button" 
+      <div id="categoryButtons"></div>
+      <button onclick="goBackToMain
 
-onclick="goBackToMain()">← Back</button>
-          <div class="search-bar">
-            <input type="text" 
-
-id="categorySearchInput" placeholder="Search 
-
-videos..." oninput="filterCategoryVideos()" 
-
-/>
-            <div class="search-icon">🔍</div>
-          </div>
-        </div>
-
-        <div id="categoryButtons" 
-
-class="category-buttons"></div>
-      </div>
+()">Back</button>
     </div>
   </div>
 
   <script>
-    // Load Data
+    // User Data
+    let balance = parseInt
+
+(localStorage.getItem('balance')) || 0;
     const savedName = localStorage.getItem
 
 ('name');
     const savedImage = localStorage.getItem
 
 ('profileImage');
-    let balance = parseInt
+    let bonusClaimed = localStorage.getItem
 
-(localStorage.getItem('balance')) || 0;
-    let currentCategory = "";
+('bonusClaimed') === 'true';
     let videosWatched = JSON.parse
 
 (localStorage.getItem('videosWatched')) || 
 
 {};
-    let userVideos = JSON.parse
-
-(localStorage.getItem('userVideos')) || {};
-    let bonusClaimed = localStorage.getItem
-
-('bonusClaimed') === 'true';
 
     // Initialize
     window.onload = function() {
@@ -457,73 +260,128 @@ class="category-buttons"></div>
 ('profileSection').classList.remove
 
 ('hidden');
-      }
-      
-      // Show bonus button if not claimed yet
-      if (!bonusClaimed && savedName && 
-
-savedImage) {
         document.getElementById
 
+('profileName').textContent = savedName;
+        document.getElementById
+
+('profileImage').src = savedImage;
+        
+        if (!bonusClaimed) {
+          document.getElementById
+
 ('bonusButton').classList.remove('hidden');
+        }
       }
     };
 
-    function showMembers() {
-      alert("Members section coming soon! 
+    // Profile Functions
+    function updateProfile() {
+      if (savedName && savedImage) {
+        document.getElementById
 
-👥");
-    }
+('profileSetup').classList.add('hidden');
+        document.getElementById
 
-    function shareApp() {
-      const shareText = "Check out this 
+('profileSection').classList.remove
 
-amazing app to earn money by watching videos! 
-
-🚀\n\n";
-      const shareUrl = window.location.href;
-      
-      if (navigator.share) {
-        // Use Web Share API if available
-        navigator.share({
-          title: 'Watick Video Earn Money',
-          text: shareText,
-          url: shareUrl
-        }).catch(err => {
-          console.log('Error sharing:', err);
-          fallbackShare(shareText, shareUrl);
-        });
-      } else {
-        // Fallback for browsers that don't 
-
-support Web Share API
-        fallbackShare(shareText, shareUrl);
+('hidden');
       }
     }
 
-    function fallbackShare(shareText, 
+    function saveProfile() {
+      const name = document.getElementById
 
-shareUrl) {
-      // Copy to clipboard
-      const textToCopy = `
+('nameInput').value.trim();
+      const file = document.getElementById
 
-${shareText}${shareUrl}`;
-      navigator.clipboard.writeText
+('profilePicInput').files[0];
+      
+      if (!name || !file) {
+        alert("Please enter name and select 
 
-(textToCopy).then(() => {
-        alert("App link copied to clipboard! 
+profile picture");
+        return;
+      }
 
-Paste it anywhere to share.\n\n" + 
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        localStorage.setItem('name', name);
+        localStorage.setItem('profileImage', 
 
-textToCopy);
-      }).catch(err => {
-        console.error('Failed to copy:', 
+e.target.result);
+        
+        if (!bonusClaimed) {
+          balance += 20;
+          bonusClaimed = true;
+          localStorage.setItem
 
-err);
-        prompt("Copy this link to share the 
+('bonusClaimed', 'true');
+          localStorage.setItem('balance', 
 
-app:", shareUrl);
-      });
+balance);
+          updateBalanceDisplay();
+          alert("You received RS20 bonus!");
+        }
+        
+        document.getElementById
+
+('profileName').textContent = name;
+        document.getElementById
+
+('profileImage').src = e.target.result;
+        updateProfile();
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function updateBalanceDisplay() {
+      document.getElementById
+
+('balanceDisplay').textContent = `Balance: 
+
+RS${balance}`;
+    }
+
+    function showBonusMessage() {
+      document.getElementById
+
+('bonusMessage').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById
+
+('bonusMessage').classList.add('hidden');
+      }, 3000);
+    }
+
+    function showWithdrawMessage() {
+      document.getElementById
+
+('withdrawMessage').classList.toggle
+
+('hidden');
+    }
+
+    function showMembers() {
+      alert("Members feature coming soon!");
+    }
+
+    function shareApp() {
+      const shareData = {
+        title: 'Watick Video Earn Money',
+        text: 'Earn money by watching 
+
+videos!',
+        url: window.location.href
+      };
+      
+      try {
+        navigator.share(shareData);
+      } catch (err) {
+        prompt("Copy this link to share:", 
+
+window.location.href);
+      }
     }
 
     function checkBalanceForForm() {
@@ -536,128 +394,14 @@ Kuj0-le8LcqhulkRZ8ut0wP2Yqtvv6vq0/edit',
 
 '_blank');
       } else {
-        alert("Moziz Sarif! Apka balance kam 
+        alert("You need at least RS10 
 
-hai (RS10 required).\nVideo dekhe aur balance 
-
-zyada kare.");
+balance");
       }
     }
 
-    function updateBalanceDisplay() {
-      document.getElementById
-
-('balanceDisplay').textContent = `Balance: 
-
-RS${balance}`;
-      localStorage.setItem('balance', 
-
-balance);
-    }
-
-    // Profile Functions
-    function updateProfile() {
-      const profileSection = 
-
-document.getElementById('profileSection');
-      const profileName = 
-
-document.getElementById('profileName');
-      const profileImage = 
-
-document.getElementById('profileImage');
-      
-      if (savedName && savedImage) {
-        profileName.textContent = `Welcome 
-
-back, ${savedName}!`;
-        profileImage.src = savedImage;
-        profileSection.classList.remove
-
-('hidden');
-        document.getElementById
-
-('profileSetup').classList.add('hidden');
-      } else {
-        profileSection.classList.add
-
-('hidden');
-        document.getElementById
-
-('profileSetup').classList.remove('hidden');
-      }
-    }
-
-    function saveProfile() {
-      const name = document.getElementById
-
-('nameInput').value.trim();
-      const profilePicInput = 
-
-document.getElementById
-
-('profilePicInput').files[0];
-
-      if (!name) {
-        alert("Name dalo!");
-        return;
-      }
-
-      if (!profilePicInput) {
-        alert("Profile Picture dalo!");
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = function() {
-        localStorage.setItem('name', name);
-        localStorage.setItem('profileImage', 
-
-reader.result);
-        
-        // Add bonus if not claimed yet
-        if (!bonusClaimed) {
-          balance += 20;
-          updateBalanceDisplay();
-          bonusClaimed = true;
-          localStorage.setItem
-
-('bonusClaimed', 'true');
-          alert("Congratulations! RS20 bonus 
-
-added to your account");
-        }
-        
-        updateProfile();
-      };
-      reader.readAsDataURL(profilePicInput);
-    }
-
-    function showBonusMessage() {
-      document.getElementById
-
-('bonusMessage').classList.remove('hidden');
-      setTimeout(() => {
-        document.getElementById
-
-('bonusMessage').classList.add('hidden');
-      }, 5000);
-    }
-
-    // Withdraw Message Function
-    function showWithdrawMessage() {
-      const messageDiv = 
-
-document.getElementById('withdrawMessage');
-      messageDiv.classList.toggle('hidden');
-      document.getElementById
-
-('bonusMessage').classList.add('hidden');
-    }
-
-    // Category Functions
+    // Video Categories
     function openCategory(category) {
-      currentCategory = category;
       document.getElementById
 
 ('mainCategoryButtons').classList.add
@@ -668,13 +412,64 @@ document.getElementById('withdrawMessage');
 ('categoryContent').classList.remove
 
 ('hidden');
-      document.getElementById
+      
+      const buttons = 
 
-('withdrawMessage').classList.add('hidden');
-      document.getElementById
+document.getElementById('categoryButtons');
+      buttons.innerHTML = '';
+      
+      const videos = {
+        'youtube': [
+          {title: "YouTube Video 1", link: 
 
-('bonusMessage').classList.add('hidden');
-      loadCategoryVideos(category);
+"https://youtube.com"},
+          {title: "YouTube Video 2", link: 
+
+"https://youtube.com"}
+        ],
+        'instagram': [
+          {title: "Instagram Video 1", link: 
+
+"https://instagram.com"},
+          {title: "Instagram Video 2", link: 
+
+"https://instagram.com"}
+        ],
+        'tiktok': [
+          {title: "TikTok Video 1", link: 
+
+"https://tiktok.com"},
+          {title: "TikTok Video 2", link: 
+
+"https://tiktok.com"}
+        ]
+      };
+      
+      videos[category].forEach(video => {
+        const btn = document.createElement
+
+('button');
+        btn.textContent = video.title;
+        btn.onclick = function() {
+          if (!videosWatched[video.title]) {
+            balance += 3;
+            videosWatched[video.title] = 
+
+true;
+            localStorage.setItem('balance', 
+
+balance);
+            localStorage.setItem
+
+('videosWatched', JSON.stringify
+
+(videosWatched));
+            updateBalanceDisplay();
+          }
+          window.open(video.link, '_blank');
+        };
+        buttons.appendChild(btn);
+      });
     }
 
     function goBackToMain() {
@@ -686,253 +481,6 @@ document.getElementById('withdrawMessage');
       document.getElementById
 
 ('categoryContent').classList.add('hidden');
-    }
-
-    function loadCategoryVideos(category) {
-      const categoryButtons = 
-
-document.getElementById('categoryButtons');
-      categoryButtons.innerHTML = "";
-
-      // Default videos for each category (5 
-
-buttons)
-      const defaultVideos = {
-        'youtube': [
-          {title: "YouTube Video 1", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 2", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 3", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 4", link: 
-
-"https://youtube.com"},
-          {title: "YouTube Video 5", link: 
-
-"https://youtube.com"}
-        ],
-        'instagram': [
-          {title: "Instagram Video 1", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 2", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 3", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 4", link: 
-
-"https://instagram.com"},
-          {title: "Instagram Video 5", link: 
-
-"https://instagram.com"}
-        ],
-        'tiktok': [
-          {title: "Sheya Boy", link: 
-
-"https://vt.tiktok.com/ZSraAp8WN/"},
-          {title: "WhatsApp Status", link: 
-
-"https://vt.tiktok.com/ZSraAqQvj/"},
-          {title: "Ali Mola", link: 
-
-"https://vt.tiktok.com/ZSraADnDb/"},
-          {title: "TikTok Video 4", link: 
-
-"https://tiktok.com"},
-          {title: "TikTok Video 5", link: 
-
-"https://tiktok.com"}
-        ]
-      };
-
-      // Add default videos for the selected 
-
-category
-      defaultVideos[category].forEach(video 
-
-=> {
-        const videoContainer = 
-
-document.createElement('div');
-        videoContainer.className = "user-
-
-video-container";
-
-        const videoButton = 
-
-document.createElement('button');
-        videoButton.textContent = 
-
-video.title;
-        videoButton.className = "video-
-
-button";
-        
-        // Create unique key for default 
-
-videos
-        const videoKey = `default-
-
-${category}-${video.title.replace(/\s+/g, 
-
-'-')}`;
-        
-        videoButton.onclick = function() {
-          if (!videosWatched[videoKey]) {
-            balance += 3;
-            videosWatched[videoKey] = true;
-            localStorage.setItem
-
-('videosWatched', JSON.stringify
-
-(videosWatched));
-            updateBalanceDisplay();
-          }
-          window.open(video.link, '_blank');
-        };
-        
-        if (videosWatched[videoKey]) {
-          videoButton.style.opacity = "0.7";
-        }
-        
-        videoContainer.appendChild
-
-(videoButton);
-        categoryButtons.appendChild
-
-(videoContainer);
-      });
-
-      // Add user's own videos from 
-
-localStorage
-      for (let i = 0; i < 
-
-localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith(`${category}-`) && 
-
-!key.startsWith('default-')) {
-          const videoTitle = key.replace(`
-
-${category}-`, "");
-          const videoLink = 
-
-localStorage.getItem(key);
-
-          const videoContainer = 
-
-document.createElement('div');
-          videoContainer.className = "user-
-
-video-container";
-
-          const videoButton = 
-
-document.createElement('button');
-          videoButton.textContent = 
-
-videoTitle;
-          videoButton.className = "video-
-
-button";
-          
-          videoButton.onclick = function() {
-            if (!videosWatched[key]) {
-              balance += 3;
-              videosWatched[key] = true;
-              localStorage.setItem
-
-('videosWatched', JSON.stringify
-
-(videosWatched));
-              updateBalanceDisplay();
-            }
-            window.open(videoLink, '_blank');
-          };
-          
-          if (videosWatched[key]) {
-            videoButton.style.opacity = 
-
-"0.7";
-          }
-          
-          videoContainer.appendChild
-
-(videoButton);
-          
-          if (userVideos[key] && userVideos
-
-[key] === savedName) {
-            const deleteBtn = 
-
-document.createElement('button');
-            deleteBtn.textContent = "Delete";
-            deleteBtn.className = "delete-
-
-btn";
-            deleteBtn.onclick = function(e) {
-              e.stopPropagation();
-              if (confirm("Kya aap is video 
-
-ko delete karna chahte hain?")) {
-                localStorage.removeItem(key);
-                delete userVideos[key];
-                localStorage.setItem
-
-('userVideos', JSON.stringify(userVideos));
-                loadCategoryVideos
-
-(currentCategory);
-              }
-            };
-            videoContainer.appendChild
-
-(deleteBtn);
-          }
-          
-          categoryButtons.appendChild
-
-(videoContainer);
-        }
-      }
-    }
-
-    function filterCategoryVideos() {
-      const searchInput = 
-
-document.getElementById
-
-('categorySearchInput').value.toLowerCase();
-      const videoContainers = 
-
-document.getElementById
-
-('categoryButtons').children;
-
-      for (let container of videoContainers) 
-
-{
-        const button = 
-
-container.querySelector('button.video-
-
-button');
-        const buttonText = 
-
-button.textContent.toLowerCase();
-        container.style.display = 
-
-buttonText.includes(searchInput) ? "flex" : 
-
-"none";
-      }
     }
   </script>
 </body>
