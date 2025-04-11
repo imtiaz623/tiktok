@@ -126,6 +126,35 @@ Geneva, Verdana, sans-serif;
       margin-top: 15px;
       border: 1px solid #0ff;
     }
+    .video-list-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .search-bar {
+      display: flex;
+      width: 100%;
+    }
+    .search-bar input {
+      flex-grow: 1;
+      padding: 8px;
+      border-radius: 10px 0 0 10px;
+      border: none;
+    }
+    .search-icon {
+      background: #00ffff;
+      padding: 8px 12px;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+    }
+    .back-button {
+      background: #ff6f61;
+      padding: 8px 12px;
+      border-radius: 10px;
+      color: #000;
+      font-weight: bold;
+      margin-right: 10px;
+    }
     @media (max-width: 400px) {
       .container {
         padding: 15px;
@@ -219,10 +248,18 @@ onclick="shareApp()">Share This App</button>
     </div>
 
     <div id="categoryContent" class="hidden">
-      <div id="categoryButtons"></div>
-      <button onclick="goBackToMain
+      <div class="video-list-header">
+        <button class="back-button" 
 
-()">Back</button>
+onclick="goBackToMain()">← Back</button>
+        <div class="search-bar">
+          <input type="text" id="searchInput" 
+
+placeholder="Search videos...">
+          <div class="search-icon">🔍</div>
+        </div>
+      </div>
+      <div id="categoryButtons"></div>
     </div>
   </div>
 
@@ -436,10 +473,19 @@ document.getElementById('categoryButtons');
 "https://instagram.com"}
         ],
         'tiktok': [
-          {title: "TikTok Video 1", link: 
+          {title: "Sheya Boy", link: 
+
+"https://vt.tiktok.com/ZSraAp8WN/"},
+          {title: "WhatsApp Status", link: 
+
+"https://vt.tiktok.com/ZSraAqQvj/"},
+          {title: "Ali Mola", link: 
+
+"https://vt.tiktok.com/ZSraADnDb/"},
+          {title: "TikTok Video 4", link: 
 
 "https://tiktok.com"},
-          {title: "TikTok Video 2", link: 
+          {title: "TikTok Video 5", link: 
 
 "https://tiktok.com"}
         ]
